@@ -1,0 +1,13 @@
+franka_ros_interface
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/cmake.lock /mnt/shared/franka-interface/catkin_ws/devel/./cmake.lock
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/share/franka_ros_interface/cmake/franka_ros_interfaceConfig-version.cmake /mnt/shared/franka-interface/catkin_ws/devel/share/franka_ros_interface/cmake/franka_ros_interfaceConfig-version.cmake
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/share/franka_ros_interface/cmake/franka_ros_interfaceConfig.cmake /mnt/shared/franka-interface/catkin_ws/devel/share/franka_ros_interface/cmake/franka_ros_interfaceConfig.cmake
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/libfranka_ros_interface.so /mnt/shared/franka-interface/catkin_ws/devel/lib/libfranka_ros_interface.so
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/robot_state_publisher_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/robot_state_publisher_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/sensor_data_subscriber_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/sensor_data_subscriber_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/execute_skill_action_server_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/execute_skill_action_server_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/franka_interface_status_publisher_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/franka_interface_status_publisher_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/get_current_robot_state_server_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/get_current_robot_state_server_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/run_loop_process_info_state_publisher_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/run_loop_process_info_state_publisher_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/get_current_franka_interface_status_server_node /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/get_current_franka_interface_status_server_node
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/pkgconfig/franka_ros_interface.pc /mnt/shared/franka-interface/catkin_ws/devel/lib/pkgconfig/franka_ros_interface.pc

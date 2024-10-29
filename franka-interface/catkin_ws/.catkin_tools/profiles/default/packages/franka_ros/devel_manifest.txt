@@ -1,0 +1,2 @@
+franka_ros/franka_ros
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros/cmake.lock /mnt/shared/franka-interface/catkin_ws/devel/./cmake.lock

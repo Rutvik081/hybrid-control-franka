@@ -1,0 +1,8 @@
+prefix=/mnt/shared/franka-interface/catkin_ws/install
+
+Name: franka_ros_interface
+Description: Description of franka_ros_interface
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy actionlib_msgs

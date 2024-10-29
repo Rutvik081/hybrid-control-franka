@@ -1,0 +1,7 @@
+franka_ros/franka_visualization
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_visualization/cmake.lock /mnt/shared/franka-interface/catkin_ws/devel/./cmake.lock
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_visualization/share/franka_visualization/cmake/franka_visualizationConfig-version.cmake /mnt/shared/franka-interface/catkin_ws/devel/share/franka_visualization/cmake/franka_visualizationConfig-version.cmake
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_visualization/share/franka_visualization/cmake/franka_visualizationConfig.cmake /mnt/shared/franka-interface/catkin_ws/devel/share/franka_visualization/cmake/franka_visualizationConfig.cmake
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_visualization/lib/franka_visualization/robot_joint_state_publisher /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_visualization/robot_joint_state_publisher
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_visualization/lib/franka_visualization/gripper_joint_state_publisher /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_visualization/gripper_joint_state_publisher
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_visualization/lib/pkgconfig/franka_visualization.pc /mnt/shared/franka-interface/catkin_ws/devel/lib/pkgconfig/franka_visualization.pc

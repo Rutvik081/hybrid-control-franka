@@ -1,0 +1,141 @@
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_eus[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target _catkin_empty_exported_target[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target actionlib_generate_messages_lisp
+[  0%] Built target _catkin_empty_exported_target
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
+[35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target franka_interface_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target franka_interface_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target actionlib_generate_messages_eus
+[  0%] Built target actionlib_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target franka_interface_msgs_generate_messages_nodejs
+[  0%] Built target franka_interface_msgs_generate_messages_cpp
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target franka_interface_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target franka_interface_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target franka_interface_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target franka_interface_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[  0%] Built target tf_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_py
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[  0%] Built target franka_interface_msgs_generate_messages_lisp
+[  0%] Built target franka_interface_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_eus
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target franka_ros_interface[0m
+[  4%] [32mBuilding CXX object CMakeFiles/franka_ros_interface.dir/src/shared_memory_handler.cpp.o[0m
+[  8%] [32m[1mLinking CXX shared library /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/libfranka_ros_interface.so[0m
+[  8%] Built target franka_ros_interface
+[35m[1mScanning dependencies of target get_current_franka_interface_status_server_node[0m
+[35m[1mScanning dependencies of target sensor_data_subscriber_node[0m
+[35m[1mScanning dependencies of target get_current_robot_state_server_node[0m
+[35m[1mScanning dependencies of target franka_interface_status_publisher_node[0m
+[35m[1mScanning dependencies of target execute_skill_action_server_node[0m
+[35m[1mScanning dependencies of target run_loop_process_info_state_publisher_node[0m
+[35m[1mScanning dependencies of target robot_state_publisher_node[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/get_current_franka_interface_status_server_node.dir/src/get_current_franka_interface_status_server_node.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/get_current_franka_interface_status_server_node.dir/src/get_current_franka_interface_status_server.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/franka_interface_status_publisher_node.dir/src/franka_interface_status_publisher.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/franka_interface_status_publisher_node.dir/src/franka_interface_status_publisher_node.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/run_loop_process_info_state_publisher_node.dir/src/run_loop_process_info_state_publisher.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/execute_skill_action_server_node.dir/src/execute_skill_action_server.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/get_current_robot_state_server_node.dir/src/get_current_robot_state_server.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/sensor_data_subscriber_node.dir/src/sensor_data/sensor_subscriber_handler.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/run_loop_process_info_state_publisher_node.dir/src/run_loop_process_info_state_publisher_node.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/execute_skill_action_server_node.dir/src/execute_skill_action_server_node.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/sensor_data_subscriber_node.dir/src/sensor_data/sensor_subscriber.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/get_current_robot_state_server_node.dir/src/get_current_robot_state_server_node.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/robot_state_publisher_node.dir/src/robot_state_publisher.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/robot_state_publisher_node.dir/src/robot_state_publisher_node.cpp.o[0m
+[ 73%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/get_current_franka_interface_status_server_node[0m
+[ 78%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/get_current_robot_state_server_node[0m
+[ 78%] Built target get_current_franka_interface_status_server_node
+[ 78%] Built target get_current_robot_state_server_node
+[ 82%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/sensor_data_subscriber_node[0m
+[ 86%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/franka_interface_status_publisher_node[0m
+[ 91%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/run_loop_process_info_state_publisher_node[0m
+[ 91%] Built target sensor_data_subscriber_node
+[ 91%] Built target franka_interface_status_publisher_node
+[ 91%] Built target run_loop_process_info_state_publisher_node
+[ 95%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/robot_state_publisher_node[0m
+[ 95%] Built target robot_state_publisher_node
+[100%] [32m[1mLinking CXX executable /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_ros_interface/lib/franka_ros_interface/execute_skill_action_server_node[0m
+[100%] Built target execute_skill_action_server_node

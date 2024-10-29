@@ -1,0 +1,7 @@
+franka_ros/franka_hw
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/cmake.lock /mnt/shared/franka-interface/catkin_ws/devel/./cmake.lock
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/share/franka_hw/cmake/franka_hwConfig.cmake /mnt/shared/franka-interface/catkin_ws/devel/share/franka_hw/cmake/franka_hwConfig.cmake
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/share/franka_hw/cmake/franka_hwConfig-version.cmake /mnt/shared/franka-interface/catkin_ws/devel/share/franka_hw/cmake/franka_hwConfig-version.cmake
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/lib/libfranka_control_services.so /mnt/shared/franka-interface/catkin_ws/devel/lib/libfranka_control_services.so
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/lib/libfranka_hw.so /mnt/shared/franka-interface/catkin_ws/devel/lib/libfranka_hw.so
+/mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/lib/pkgconfig/franka_hw.pc /mnt/shared/franka-interface/catkin_ws/devel/lib/pkgconfig/franka_hw.pc

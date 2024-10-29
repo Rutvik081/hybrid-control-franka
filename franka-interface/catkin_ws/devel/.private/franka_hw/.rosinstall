@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /mnt/shared/franka-interface/catkin_ws/devel/.private/franka_hw/setup.sh

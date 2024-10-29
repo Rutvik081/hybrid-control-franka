@@ -1,0 +1,6 @@
+devel_space: /mnt/shared/franka-interface/catkin_ws/devel
+install: false
+install_space: /mnt/shared/franka-interface/catkin_ws/install
+profile: default
+source_space: /mnt/shared/franka-interface/catkin_ws/src
+workspace: /mnt/shared/franka-interface/catkin_ws

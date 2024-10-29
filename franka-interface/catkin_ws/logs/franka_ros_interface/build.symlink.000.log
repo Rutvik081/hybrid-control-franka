@@ -1,0 +1,11 @@
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/share/franka_ros_interface/cmake/franka_ros_interfaceConfig-version.cmake
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/share/franka_ros_interface/cmake/franka_ros_interfaceConfig.cmake
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/libfranka_ros_interface.so
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/robot_state_publisher_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/sensor_data_subscriber_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/execute_skill_action_server_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/franka_interface_status_publisher_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/get_current_robot_state_server_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/run_loop_process_info_state_publisher_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/franka_ros_interface/get_current_franka_interface_status_server_node
+Symlinking /mnt/shared/franka-interface/catkin_ws/devel/lib/pkgconfig/franka_ros_interface.pc
