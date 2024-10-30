@@ -47,7 +47,7 @@ if __name__ == "__main__":
         pose.translation[0] += r + circ[i, 0]
         pose.translation[1] += circ[i, 1]
         target_poses.append(pose)
-    target_force = [0, 0, -10, 0, 0, 0]
+    target_force = [0, 0, 0, 0, 0, 0]
     S = [1, 1, 1, 1, 1, 1]
     position_kps_cart = FC.DEFAULT_TRANSLATIONAL_STIFFNESSES + FC.DEFAULT_ROTATIONAL_STIFFNESSES
     force_kps_cart = [0.1] * 6

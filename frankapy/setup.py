@@ -5,7 +5,7 @@ from setuptools import setup
 
 requirements = [
     'autolab_core',
-    'empy==3.3.4',
+    'empy',
     'numpy',
     'numpy-quaternion',
     'numba',

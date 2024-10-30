@@ -675,305 +675,6 @@ class FrankaArm:
         if dynamic:
             sleep(FC.DYNAMIC_SKILL_WAIT_TIME)
 
-    def execute_cartesian_velocities(self,
-                    cartesian_velocities,
-                    cartesian_accelerations,
-                    duration=5,
-                    dynamic=False,
-                    buffer_time=FC.DEFAULT_TERM_BUFFER_TIME,
-                    force_thresholds=None,
-                    torque_thresholds=None,
-                    cartesian_impedances=None,
-                    joint_impedances=None,
-                    block=True,
-                    ignore_errors=True,
-                    ignore_virtual_walls=False,
-                    skill_desc='ExecutecartesianVelocities'):
-        """
-        Commands Arm to execute cartesian velocities
-
-        Parameters
-        ----------
-            cartesian_velocities : :obj:`list` 
-                A list of 6 numbers that correspond to cartesian velocities in m/s and rad/s.
-            cartesian_accelerations : :obj:`list` 
-                A list of 6 numbers that correspond to cartesian accelerations in m/s^2 and rad/s^2.
-            duration : :obj:`float` 
-                How much time this robot motion should take.
-            dynamic : :obj:`bool` 
-                Flag that states whether the skill is dynamic. If True, it 
-                will use our cartesian impedance controller and sensor values.
-            buffer_time : :obj:`float` 
-                How much extra time the termination handler will wait
-                before stopping the skill after duration has passed.
-            force_thresholds : :obj:`list` 
-                List of 6 floats corresponding to force limits on translation 
-                (xyz) and rotation about (xyz) axes. Default is None. 
-                If None then will not stop on contact.
-            torque_thresholds : :obj:`list` 
-                List of 7 floats corresponding to torque limits on each joint. 
-                Default is None. If None then will not stop on contact.
-            cartesian_impedances : :obj:`list` 
-                List of 6 floats corresponding to impedances on translation 
-                (xyz) and rotation about (xyz) axes. Default is None. If None 
-                then will use default impedances.
-            joint_impedances : :obj:`list` 
-                List of 7 floats corresponding to impedances on each joint. 
-                This is used when use_impedance is False. Default is None. 
-                If None then will use default impedances.
-            block : :obj:`bool` 
-                Function blocks by default. If False, the function becomes
-                asynchronous and can be preempted.
-            ignore_errors : :obj:`bool` 
-                Function ignores errors by default. If False, errors and some 
-                exceptions can be thrown.
-            ignore_virtual_walls : :obj:`bool` 
-                Function checks for collisions with virtual walls by default. 
-                If False, the robot no longer checks, which may be dangerous.
-            skill_desc : :obj:`str` 
-                Skill description to use for logging on the Control PC.
-
-        Raises:
-            ValueError: If is_cartesians_reachable(cartesians) returns False
-        """
-
-        cartesian_velocities = np.array(cartesian_velocities).tolist() 
-        cartesian_accelerations = np.array(cartesian_accelerations).tolist() 
-
-        if dynamic:
-            skill = Skill(SkillType.CartesianVelocitySkill, 
-                          TrajectoryGeneratorType.PassThroughCartesianVelocityTrajectoryGenerator,
-                          feedback_controller_type=FeedbackControllerType.SetInternalImpedanceFeedbackController,
-                          termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
-                          skill_desc=skill_desc)
-            block = False
-        else:
-            print("Unimplemented Cartesian Velocity Skill")
-
-        skill.add_initial_sensor_values(FC.EMPTY_SENSOR_VALUES)
-
-        skill.set_cartesian_impedances(False, cartesian_impedances, cartesian_impedances)
-
-        if not skill.check_for_contact_params(buffer_time, force_thresholds, torque_thresholds):
-            if dynamic:
-                skill.add_time_termination_params(buffer_time)
-            
-        skill.add_goal_cartesian_velocities(duration, cartesian_velocities, cartesian_accelerations)
-        goal = skill.create_goal()
-
-        self._send_goal(goal,
-                        cb=lambda x: skill.feedback_callback(x),
-                        block=block,
-                        ignore_errors=ignore_errors)
-
-        if dynamic:
-            sleep(FC.DYNAMIC_SKILL_WAIT_TIME)
-
-    def execute_joint_velocities(self,
-                    joint_velocities,
-                    joint_accelerations,
-                    duration=5,
-                    dynamic=False,
-                    buffer_time=FC.DEFAULT_TERM_BUFFER_TIME,
-                    force_thresholds=None,
-                    torque_thresholds=None,
-                    cartesian_impedances=None,
-                    joint_impedances=None,
-                    block=True,
-                    ignore_errors=True,
-                    ignore_virtual_walls=False,
-                    skill_desc='ExecuteJointVelocities'):
-        """
-        Commands Arm to execute joint velocities
-
-        Parameters
-        ----------
-            joint_velocities : :obj:`list` 
-                A list of 7 numbers that correspond to joint velocities in radians/second.
-            joint_accelerations : :obj:`list` 
-                A list of 7 numbers that correspond to joint accelerations in radians/second^2.
-            duration : :obj:`float` 
-                How much time this robot motion should take.
-            dynamic : :obj:`bool` 
-                Flag that states whether the skill is dynamic. If True, it 
-                will use our joint impedance controller and sensor values.
-            buffer_time : :obj:`float` 
-                How much extra time the termination handler will wait
-                before stopping the skill after duration has passed.
-            force_thresholds : :obj:`list` 
-                List of 6 floats corresponding to force limits on translation 
-                (xyz) and rotation about (xyz) axes. Default is None. 
-                If None then will not stop on contact.
-            torque_thresholds : :obj:`list` 
-                List of 7 floats corresponding to torque limits on each joint. 
-                Default is None. If None then will not stop on contact.
-            cartesian_impedances : :obj:`list` 
-                List of 6 floats corresponding to impedances on translation 
-                (xyz) and rotation about (xyz) axes. Default is None. If None 
-                then will use default impedances.
-            joint_impedances : :obj:`list` 
-                List of 7 floats corresponding to impedances on each joint. 
-                This is used when use_impedance is False. Default is None. 
-                If None then will use default impedances.
-            block : :obj:`bool` 
-                Function blocks by default. If False, the function becomes
-                asynchronous and can be preempted.
-            ignore_errors : :obj:`bool` 
-                Function ignores errors by default. If False, errors and some 
-                exceptions can be thrown.
-            ignore_virtual_walls : :obj:`bool` 
-                Function checks for collisions with virtual walls by default. 
-                If False, the robot no longer checks, which may be dangerous.
-            skill_desc : :obj:`str` 
-                Skill description to use for logging on the Control PC.
-
-        Raises:
-            ValueError: If is_joints_reachable(joints) returns False
-        """
-
-        joint_velocities = np.array(joint_velocities).tolist() 
-        joint_accelerations = np.array(joint_accelerations).tolist() 
-
-        if dynamic:
-            skill = Skill(SkillType.JointVelocitySkill, 
-                          TrajectoryGeneratorType.PassThroughJointVelocityTrajectoryGenerator,
-                          feedback_controller_type=FeedbackControllerType.SetInternalImpedanceFeedbackController,
-                          termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
-                          skill_desc=skill_desc)
-            block = False
-        else:
-            print("Unimplemented Joint Velocity Skill")
-
-        skill.add_initial_sensor_values(FC.EMPTY_SENSOR_VALUES)
-
-        skill.set_joint_impedances(False, cartesian_impedances, joint_impedances, None, None)
-
-        if not skill.check_for_contact_params(buffer_time, force_thresholds, torque_thresholds):
-            if dynamic:
-                skill.add_time_termination_params(buffer_time)
-            else:
-                print("Unimplemented Joint Velocity Skill")
-
-        skill.add_goal_joint_velocities(duration, joint_velocities, joint_accelerations)
-        goal = skill.create_goal()
-
-        self._send_goal(goal,
-                        cb=lambda x: skill.feedback_callback(x),
-                        block=block,
-                        ignore_errors=ignore_errors)
-
-        if dynamic:
-            sleep(FC.DYNAMIC_SKILL_WAIT_TIME)
-
-    def execute_joint_torques(self,
-                    joint_torques,
-                    selection=[0,0,0,0,0,0,0],
-                    remove_gravity=[0,0,0,0,0,0,0],
-                    duration=5,
-                    dynamic=False,
-                    buffer_time=FC.DEFAULT_TERM_BUFFER_TIME,
-                    force_thresholds=None,
-                    torque_thresholds=None,
-                    k_gains=None,
-                    d_gains=None,
-                    block=True,
-                    ignore_errors=True,
-                    ignore_virtual_walls=False,
-                    skill_desc='ExecuteJointTorques'):
-        """
-        Commands Arm to execute joint torques
-
-        Parameters
-        ----------
-            joint_torques : :obj:`list` 
-                A list of 7 numbers that correspond to joint torques in radians/second.
-            selection : :obj:`list` 
-                A list of 7 numbers that indicate whether to use the joint torques passed in or not. 
-                If 1 is passed in for a specific joint, the robot will use the joint torque for that joint.
-            remove_gravity : :obj:`list` 
-                A list of 7 numbers that indicate whether to remove gravity from that joint or not. 
-                If 1 is passed in for a specific joint, the robot will subtract gravity for that joint.
-            duration : :obj:`float` 
-                How much time this robot motion should take.
-            dynamic : :obj:`bool` 
-                Flag that states whether the skill is dynamic. If True, it 
-                will use our joint impedance controller and sensor values.
-            buffer_time : :obj:`float` 
-                How much extra time the termination handler will wait
-                before stopping the skill after duration has passed.
-            force_thresholds : :obj:`list` 
-                List of 6 floats corresponding to force limits on translation 
-                (xyz) and rotation about (xyz) axes. Default is None. 
-                If None then will not stop on contact.
-            torque_thresholds : :obj:`list` 
-                List of 7 floats corresponding to torque limits on each joint. 
-                Default is None. If None then will not stop on contact.
-            k_gains : :obj:`list` 
-                List of 7 floats corresponding to the k_gains on each joint for 
-                our impedance controller. Default is None. If None then will use 
-                default k_gains.
-            d_gains : :obj:`list` 
-                List of 7 floats corresponding to the d_gains on each joint for 
-                our impedance controller. Default is None. If None then will use 
-                default d_gains.
-            block : :obj:`bool` 
-                Function blocks by default. If False, the function becomes
-                asynchronous and can be preempted.
-            ignore_errors : :obj:`bool` 
-                Function ignores errors by default. If False, errors and some 
-                exceptions can be thrown.
-            ignore_virtual_walls : :obj:`bool` 
-                Function checks for collisions with virtual walls by default. 
-                If False, the robot no longer checks, which may be dangerous.
-            skill_desc : :obj:`str` 
-                Skill description to use for logging on the Control PC.
-
-        Raises:
-            ValueError: If is_joints_reachable(joints) returns False
-        """
-
-        joint_torques = np.array(joint_torques).tolist()
-        selection = np.array(selection).tolist() 
-
-        if dynamic:
-            block = False
-        else:
-            block = True
-
-        if k_gains is None:
-            k_gains = FC.DEFAULT_K_GAINS
-        else:
-            k_gains = np.array(k_gains).tolist()
-        if d_gains is None:
-            d_gains = FC.DEFAULT_D_GAINS
-        else:
-            d_gains = np.array(d_gains).tolist()
-
-        skill = Skill(SkillType.ImpedanceControlSkill, 
-                    TrajectoryGeneratorType.StayInInitialJointsTrajectoryGenerator,
-                    feedback_controller_type=FeedbackControllerType.PassThroughJointTorqueFeedbackController,
-                    termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
-                    skill_desc=skill_desc)
-
-        skill.add_initial_sensor_values(FC.EMPTY_SENSOR_VALUES)
-
-        skill.add_run_time(duration)
-
-        if not skill.check_for_contact_params(buffer_time, force_thresholds, torque_thresholds):
-            skill.add_time_termination_params(buffer_time)
-
-        skill.add_joint_torques(joint_torques, selection, remove_gravity, k_gains, d_gains)
-
-        goal = skill.create_goal()
-
-        self._send_goal(goal,
-                        cb=lambda x: skill.feedback_callback(x),
-                        block=block,
-                        ignore_errors=ignore_errors)
-
-        if dynamic:
-            sleep(FC.DYNAMIC_SKILL_WAIT_TIME)
-
     def execute_joint_dmp(self, 
                           joint_dmp_info, 
                           duration, 
@@ -1631,13 +1332,13 @@ class FrankaArm:
                 skill = Skill(SkillType.ImpedanceControlSkill, 
                               TrajectoryGeneratorType.StayInInitialJointsTrajectoryGenerator,
                               feedback_controller_type=FeedbackControllerType.JointImpedanceFeedbackController,
-                              termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
+                              termination_handler_type=TerminationHandlerType.FinalJointTerminationHandler, 
                               skill_desc=skill_desc)
             else:
                 skill = Skill(SkillType.JointPositionSkill, 
                               TrajectoryGeneratorType.StayInInitialJointsTrajectoryGenerator,
                               feedback_controller_type=FeedbackControllerType.SetInternalImpedanceFeedbackController,
-                              termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
+                              termination_handler_type=TerminationHandlerType.FinalJointTerminationHandler, 
                               skill_desc=skill_desc)
         else:
             if use_impedance:
@@ -1834,7 +1535,6 @@ class FrankaArm:
                         feedback_controller_type=FeedbackControllerType.ForcePositionFeedbackController,
                         termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
                         skill_desc=skill_desc)
-
         skill.add_initial_sensor_values(FC.EMPTY_SENSOR_VALUES)
         skill.add_force_position_params(position_kps_cart, force_kps_cart, position_kps_joint, force_kps_joint, S, use_cartesian_gains)
         skill.add_run_time(duration)
@@ -1855,6 +1555,91 @@ class FrankaArm:
     Reads
     """
 
+    def run_modified_force_position(self,
+                  duration=3,
+                  buffer_time=FC.DEFAULT_TERM_BUFFER_TIME,
+                  force_thresholds=None,
+                  torque_thresholds=None,
+                  position_kps_cart=FC.DEFAULT_TRANSLATIONAL_STIFFNESSES + FC.DEFAULT_ROTATIONAL_STIFFNESSES,
+                  force_kps_cart=FC.DEFAULT_HFPC_FORCE_GAIN,
+                  position_kps_joint=FC.DEFAULT_K_GAINS,
+                  force_kps_joint=FC.DEFAULT_HFPC_FORCE_GAIN,
+                  S=FC.DEFAULT_HFPC_S,
+                  interpolate=False,
+                  use_cartesian_gains=True,
+                  ignore_errors=True,
+                  ignore_virtual_walls=False,
+                  skill_desc=''):
+        """
+        Commands Arm to run modified dynamic hybrid force position control
+
+        Parameters
+        ----------
+            tool_pose : :obj:`autolab_core.RigidTransform`
+                End-effector pose in tool frame
+            duration : :obj:`float`
+                How much time this robot motion should take.
+            use_impedance : :obj:`bool`
+                Function uses our impedance controller by default. 
+                If False, uses the Franka cartesian controller.
+            dynamic : :obj:`bool`
+                Flag that states whether the skill is dynamic.  
+                If True, it will use our joint impedance controller 
+                and sensor values.
+            buffer_time : :obj:`float`
+                How much extra time the termination handler will wait
+                before stopping the skill after duration has passed.
+            force_thresholds : :obj:`list`
+                List of 6 floats corresponding to force limits on 
+                translation (xyz) and rotation about (xyz) axes.
+                Default is None. If None then will not stop on contact.
+            torque_thresholds : :obj:`list`
+                List of 7 floats corresponding to torque limits on each joint. 
+                Default is None. If None then will not stop on contact.
+            position_kp_cart : :obj:`list` 
+                List of 6 floats corresponding to proportional gain used for 
+                position errors in cartesian space.
+            force_kp_cart : :obj:`list` 
+                List of 6 floats corresponding to proportional gain used for 
+                force errors in cartesian space.
+            S : :obj:`list` 
+                List of 6 numbers between 0 and 1 for the HFPC selection matrix.
+            ignore_errors : :obj:`bool` 
+                Function ignores errors by default. If False, errors and 
+                some exceptions can be thrown.
+            ignore_virtual_walls : :obj:`bool` 
+                Function checks for collisions with virtual walls by default. 
+                If False, the robot no longer checks, which may be dangerous.
+            skill_desc : :obj:`str` 
+                Skill description to use for logging on the Control PC.
+
+        Raises
+        ------
+            ValueError: If tool_pose does not have from_frame=franka_tool and 
+                        to_frame=world or tool_pose is outside the virtual walls.
+        """
+        skill = Skill(SkillType.ForceTorqueSkill, 
+                        TrajectoryGeneratorType.PassThroughForcePositionTrajectoryGenerator,
+                        feedback_controller_type=FeedbackControllerType.ModifiedForcePositionFeedbackController,
+                        termination_handler_type=TerminationHandlerType.TimeTerminationHandler, 
+                        skill_desc=skill_desc)
+        
+        skill.add_initial_sensor_values(FC.EMPTY_SENSOR_VALUES)
+        skill.add_force_position_params(position_kps_cart, force_kps_cart, position_kps_joint, force_kps_joint, S, use_cartesian_gains)
+        skill.add_run_time(duration)
+
+        if not skill.check_for_contact_params(buffer_time, force_thresholds, torque_thresholds):
+            skill.add_time_termination_params(buffer_time)
+
+        goal = skill.create_goal()
+
+        self._send_goal(goal,
+                        cb=lambda x: skill.feedback_callback(x),
+                        block=False,
+                        ignore_errors=ignore_errors)
+
+        sleep(FC.DYNAMIC_SKILL_WAIT_TIME)
+    
     def get_robot_state(self):
         """
         Returns

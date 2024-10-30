@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-rosdep \
     ros-noetic-libfranka \
     ros-noetic-franka-ros \
+    vim \
+    python3-tk \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo "export ROS_MASTER_URI='http://192.168.1.243:11311'" >> /etc/bash.bashrc 
@@ -27,3 +29,6 @@ RUN pip3 install --upgrade numpy
 RUN pip3 install -q -e .
 RUN cd catkin_ws && source /ros_entrypoint.sh && catkin_make
 RUN echo "source /opt/frankapy/catkin_ws/devel/setup.bash" >> /etc/bash.bashrc
+
+RUN pip install pynput
+RUN pip install pytransform3d

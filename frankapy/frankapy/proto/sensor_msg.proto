@@ -1,4 +1,4 @@
-// franka-interface/proto/sensor_msg.proto and frankapy/protosensor_msg.proto should match
+// franka-interface/proto/sensor_msg.proto and frankapy/proto/sensor_msg.proto should match
 
 syntax = "proto2";
 
@@ -31,13 +31,6 @@ message PosePositionVelocitySensorMessage {
   repeated double pose_velocities = 6;
 }
 
-message JointVelocitySensorMessage {
-  required int32 id = 1;
-  required double timestamp = 2;
-
-  repeated double joint_velocities = 3;
-}
-
 message JointPositionSensorMessage {
   required int32 id = 1;
   required double timestamp = 2;
@@ -51,13 +44,6 @@ message PosePositionSensorMessage {
 
   repeated double position = 3;
   repeated double quaternion = 4;
-}
-
-message CartesianVelocitySensorMessage {
-  required int32 id = 1;
-  required double timestamp = 2;
-
-  repeated double cartesian_velocities = 3;
 }
 
 message ShouldTerminateSensorMessage {
@@ -91,15 +77,4 @@ message ForcePositionControllerSensorMessage {
   repeated double position_kps_joint = 5;
   repeated double force_kps_joint = 6;
   repeated double selection = 7;
-}
-
-message JointTorqueControllerSensorMessage {
-  required int32 id = 1;
-  required double timestamp = 2;
-
-  repeated double selection = 3;
-  repeated double remove_gravity = 4;
-  repeated double joint_torques = 5;
-  repeated double k_gains = 6;
-  repeated double d_gains = 7;
 }

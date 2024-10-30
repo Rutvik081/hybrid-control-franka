@@ -24,16 +24,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--dmp_name', '-dn')
     parser.add_argument('--start_joints', '-sj')
-    parser.add_argument('--time_scaling', '-ts')
+    parser.add_argument('--time_scaling', '-ts', default='1.0')
     parser.add_argument('--goal_offset_x', '-gox', default='0.0')
     parser.add_argument('--goal_offset_y', '-goy', default='0.0')
     args = parser.parse_args()
 
     fa = FrankaArm()
     rospy.loginfo('Generating Trajectory')
-    dmp = pkl.load(open('examples/hybrid_control/saved_dmps/' + args.dmp_name + '_pos.pkl', 'rb'))
-    fdmp = pkl.load(open('examples/hybrid_control/saved_dmps/' + args.dmp_name + '_force.pkl', 'rb'))
-    force_demo = pkl.load(open('examples/hybrid_control/saved_demos/' + args.dmp_name + '_target_forces.pkl', 'rb'))
+    dmp = pkl.load(open('hybrid_control/saved_dmps/' + args.dmp_name + '_pos.pkl', 'rb'))
+    fdmp = pkl.load(open('hybrid_control/saved_dmps/' + args.dmp_name + '_force.pkl', 'rb'))
+    force_demo = pkl.load(open('hybrid_control/saved_demos/' + args.dmp_name + '_target_forces.pkl', 'rb'))
     force_demo = np.array(force_demo)
 
     force_demo[:,0] = savgol_filter(force_demo[:,0], 51, 3)
@@ -71,7 +71,7 @@ if __name__ == "__main__":
     hz = 1./dt
     rate = rospy.Rate(hz)
 
-    start_joints = pkl.load(open('examples/hybrid_control/saved_joints/' + args.start_joints + '.pkl', 'rb'))
+    start_joints = pkl.load(open('hybrid_control/saved_joints/' + args.start_joints + '.pkl', 'rb'))
     fa.goto_joints(start_joints)
 
     pos = fa.get_pose()
